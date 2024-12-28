@@ -1,0 +1,32 @@
+### Example using Basic Auth (replace USERNAME and PASSWORD)
+### Get all departments
+GET http://localhost:8080/api/departments
+Authorization: Basic {{username}} {{password}}
+
+### Get department by ID
+GET http://localhost:8080/api/departments/1
+Authorization: Basic {{username}} {{password}}
+
+### Create new department
+POST http://localhost:8080/api/departments
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "New Department",
+  "location": "Headquarters"
+}
+
+### Update department
+PUT http://localhost:8080/api/departments/1
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "Updated Department",
+  "location": "Updated Headquarters"
+}
+
+### Delete department
+DELETE http://localhost:8080/api/departments/1
+Authorization: Basic {{username}} {{password}}

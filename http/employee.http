@@ -1,0 +1,41 @@
+### Example using Basic Auth (replace USERNAME and PASSWORD)
+### Get all employees
+GET http://localhost:8080/api/employees
+Authorization: Basic {{username}} {{password}}
+
+### Example using Basic Auth (replace USERNAME and PASSWORD)
+### Get all employees
+GET http://localhost:8080/api/employees/pageable?page=0&size=5
+Authorization: Basic {{username}} {{password}}
+
+### Get employee by ID
+GET http://localhost:8080/api/employees/1
+Authorization: Basic {{username}} {{password}}
+
+### Create new employee
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "position": "Software Engineer",
+  "department": "IT"
+}
+
+### Update employee
+PUT http://localhost:8080/api/employees/1
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "position": "Lead Engineer",
+  "department": "IT"
+}
+
+### Delete employee
+DELETE http://localhost:8080/api/employees/1
+Authorization: Basic {{username}} {{password}}

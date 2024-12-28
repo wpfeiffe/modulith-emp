@@ -1,0 +1,41 @@
+### Get all teams
+GET http://localhost:8080/api/teams
+Authorization: Basic {{username}} {{password}}
+
+### Get all teams (pageable)
+GET http://localhost:8080/api/teams/pageable?page=0&size=10
+Authorization: Basic {{username}} {{password}}
+
+### Get team by ID
+GET http://localhost:8080/api/teams/1
+Authorization: Basic {{username}} {{password}}
+
+### Find team by teamCode
+GET http://localhost:8080/api/teams/findBy?teamCode=EXAMPLE_TEAM_CODE
+Authorization: Basic {{username}} {{password}}
+
+### Create new team
+POST http://localhost:8080/api/teams
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "teamCode": "NEW_CODE",
+  "teamName": "New Team",
+  "active": true
+}
+
+### Update team
+PUT http://localhost:8080/api/teams/1
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "teamCode": "UPDATED_CODE",
+  "teamName": "Updated Team",
+  "active": true
+}
+
+### Delete team by ID
+DELETE http://localhost:8080/api/teams/1
+Authorization: Basic {{username}} {{password}}

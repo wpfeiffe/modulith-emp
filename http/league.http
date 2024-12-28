@@ -1,0 +1,35 @@
+### Example using Basic Auth (replace USERNAME and PASSWORD with valid credentials)
+
+### Get all leagues
+GET http://localhost:8080/api/leagues
+Authorization: Basic {{username}} {{password}}
+
+### Get league by ID
+GET http://localhost:8080/api/leagues/1
+Authorization: Basic {{username}} {{password}}
+
+### Create a new league
+POST http://localhost:8080/api/leagues
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "New League",
+  "country": "Country Name",
+  "level": "Professional"
+}
+
+### Update league
+PUT http://localhost:8080/api/leagues/1
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "Updated League Name",
+  "country": "Updated Country",
+  "level": "Amateur"
+}
+
+### Delete league by ID
+DELETE http://localhost:8080/api/leagues/1
+Authorization: Basic {{username}} {{password}}

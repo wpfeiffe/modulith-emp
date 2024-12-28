@@ -1,0 +1,39 @@
+### Example using Basic Auth (replace USERNAME and PASSWORD)
+### Get all players
+GET http://localhost:8080/api/players
+Authorization: Basic {{username}} {{password}}
+
+### Example using Basic Auth (replace USERNAME and PASSWORD)
+### Get all players
+GET http://localhost:8080/api/players/pageable
+Authorization: Basic {{username}} {{password}}
+
+### Get player by ID
+GET http://localhost:8080/api/players/1
+Authorization: Basic {{username}} {{password}}
+
+### Create a new player
+POST http://localhost:8080/api/players
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "New Player",
+  "team": "Team A",
+  "position": "Forward"
+}
+
+### Update player
+PUT http://localhost:8080/api/players/1
+Content-Type: application/json
+Authorization: Basic {{username}} {{password}}
+
+{
+  "name": "Updated Player",
+  "team": "Team B",
+  "position": "Defense"
+}
+
+### Delete player
+DELETE http://localhost:8080/api/players/1
+Authorization: Basic {{username}} {{password}}
